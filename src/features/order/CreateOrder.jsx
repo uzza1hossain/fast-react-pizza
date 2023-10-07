@@ -147,7 +147,7 @@ export async function action({ request }) {
     cart: JSON.parse(data.cart),
     priority: data.priority,
   };
-console.log(order)
+  console.log(order);
   const errors = {};
   if (!isValidPhone(order.phone))
     errors.phone = "Please enter correct phone number.";

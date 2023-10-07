@@ -9,8 +9,13 @@ function OrderItem({ item, isLoadingIngredients, ingredients }) {
         <p>
           <span className="font-bold">{quantity}&times;</span> {name}
         </p>
+
         <p className="font-bold">{formatCurrency(totalPrice)}</p>
       </div>
+      <p className="text-sm capitalize italic text-stone-500">
+        {/* eslint-disable-next-line react/prop-types */}
+        {isLoadingIngredients ? "Loading..." : ingredients?.join(", ")}
+      </p>
     </li>
   );
 }
